@@ -31,7 +31,7 @@ buttonSearch.onclick = function (){
                 let movieCard = document.createElement('div');
                 movieCard.classList.add('movie_card');
                 movieCard.classList.add('col25');
-                movieCard.innerHTML =                         
+                movieCard.innerHTML =
                             '<div class="content">'+
                                 '<div class="poster_cont">'+
                                     '<img class="poster" src="' + data.Search[i].Poster + '" alt=""></div>'+
@@ -39,17 +39,11 @@ buttonSearch.onclick = function (){
                                 '<p>' + data.Search[i].Year + '</p>'+
                                 '<p>' + data.Search[i].Type + '</p>'+
                             '</div>'+
-                            '<a href="https://www.imdb.com/title/' + data.Search[i].imdbID + '" class="show_more" target="_blank">Go to IMDB</a>';
+                            '<a href="https://www.imdb.com/title/' + data.Search[i].imdbID + '" class="show_more" target="_blank">Go to IMDB</a>' +
+                            '<a href="file:///home/fox/hobby/SerialKiller_pureJS/index.html?' + data.Search[i].imdbID + '" class="show_more" target="_blank">raiting episodes</a>';
                 movieList.appendChild(movieCard);
             };
 
         };
     });
 };
-
-
-
-
-
-
-    
