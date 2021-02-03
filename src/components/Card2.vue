@@ -28,8 +28,8 @@ let apikey = '6b6ec75b'; // backup - 25851263, 3fb5f5bd
 
 buttonSearch.onclick = function (){
     while (movieList.firstChild){
-        movieList.removeChild(movieList.firstChild)
-    }
+        movieList.removeChild(movieList.firstChild);
+    };
 
     let searchWords = searchBar.value;
     let url = 'http://www.omdbapi.com/?s=' + searchWords + '&apikey=' + apikey
@@ -49,7 +49,7 @@ buttonSearch.onclick = function (){
             for(let i = 0; i < data.Search.length; i++){
                 if (data.Search[i].Poster === 'N/A'){
                     data.Search[i].Poster = 'img/poster_stub.png';
-                }
+                };
                 let movieCard = document.createElement('div');
                 movieCard.classList.add('movie_card');
                 movieCard.classList.add('col25');
@@ -64,9 +64,10 @@ buttonSearch.onclick = function (){
                             '<a href="https://www.imdb.com/title/' + data.Search[i].imdbID + '" class="show_more" target="_blank">Go to IMDB</a>' +
                             '<a href="file:///home/fox/hobby/SerialKiller_pureJS/index.html?' + data.Search[i].imdbID + '" class="show_more" target="_blank">raiting episodes</a>';
                 movieList.appendChild(movieCard);
-            }
-        }
-    })
+            };
+
+        };
+    });
 };
 </script>
 
