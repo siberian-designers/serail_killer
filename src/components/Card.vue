@@ -1,31 +1,20 @@
 <template>
 <div class="movie_card col25">
   <div class="content">
-    <div class="poster_cont"><img class="poster" :src="card.poster" alt=""></div>
-    <h3>{{card.title}}</h3>
-    <p>{{card.year}}</p>
-    <p>{{card.type}}</p>
-  </div><a :href="card.imdb" class="show_more" target="_blank">Go to IMDB</a>
+    <div class="poster_cont"><img class="poster" :src="card.Poster" alt=""></div>
+    <h3>{{card.Title}}</h3>
+    <p>{{card.Year}}</p>
+    <p>{{card.Type}}</p>
+  </div><a :href="'https://www.imdb.com/title/' + card.imdbID" class="show_more" target="_blank">Go to IMDB</a>
 </div>
 </template>
 
 <script>
 export default {
-  data: function() {
-    return {
-      card: {
-        title: "Scrubs",
-        year: "2012",
-        type: "TV",
-        imdb: "https://www.imdb.com/title/tt0285403",
-        poster: "https://m.media-amazon.com/images/M/MV5BODE1MGVjZjMtODc5My00ODBjLTg0NWItMDllNTNlM2Y3ZGYyXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
-      }
-    }
-  },
   name: 'Card',
-  props: {
-    msg: String
-  },
+  props: [
+    'card'
+  ],
 }
 </script>
 <style scoped>

@@ -1,8 +1,7 @@
 <template>
 <div class="container">
   <div class="row movie_list">
-  <Card/>
-  <Card/>
+    <Card v-for="card in cards" v-bind:key="card" />
   </div>
 </div>
 </template>
@@ -11,12 +10,10 @@
 import Card from "@/components/Card";
 export default {
   name: 'Cards',
-  props: {
-    msg: String
-  },
   components: {
     Card
-  }
+  },
+  props: ["cards"]
 }
 </script>
 

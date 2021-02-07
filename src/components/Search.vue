@@ -7,73 +7,97 @@
       <button class="button_search">Search</button>
       <h2 class="no_results hide"></h2>
     </div>
-    <Card/>
-    <Card/>
+    <Cards
+      v-bind:cards="cards"
+     />
   </div>
   <div class="row movie_list"></div>
 </div>
 </template>
 
 <script>
-import Card from "@/components/Card";
+import Cards from "@/components/Cards";
 export default {
   name: 'Cards',
-  props: {
-    msg: String
+  data() {
+    return {
+      cards: [{
+          Title: "Scrubs",
+          Year: "2012",
+          Type: "TV",
+          imdbID: "https://www.imdb.com/title/tt0285403",
+          Poster: "https://m.media-amazon.com/images/M/MV5BODE1MGVjZjMtODc5My00ODBjLTg0NWItMDllNTNlM2Y3ZGYyXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+        },
+        {
+          Title: "Supernatural",
+          Year: "2005–2020",
+          imdbID: "tt0460681",
+          Type: "series",
+          Poster: "https://m.media-amazon.com/images/M/MV5BNzRmZWJhNjUtY2ZkYy00N2MyLWJmNTktOTAwY2VkODVmOGY3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+        },
+        {
+          Title: "A Very Special Supernatural Special",
+          Year: "2014",
+          imdbID: "tt4074772",
+          Type: "movie",
+          Poster: "https://m.media-amazon.com/images/M/MV5BOGY5NTAwMWUtOGJlYS00YmYwLWFlOTMtNzNjZDdlYjBiN2FjXkEyXkFqcGdeQXVyOTc1MTAwNTM@._V1_SX300.jpg"
+        }
+      ]
+    }
   },
   components: {
-    Card
+    Cards
   }
 }
 
-let movieList = document.querySelector('.movie_list');
-let noResults = document.querySelector('.no_results');
-let searchBar = document.querySelector('.search_bar');
-let buttonSearch = document.querySelector('.button_search');
-let apikey = '6b6ec75b'; // backup - 25851263, 3fb5f5bd
+// let movieList = document.querySelector('.movie_list');
+// let noResults = document.querySelector('.no_results');
+// let searchBar = document.querySelector('.search_bar');
+// let buttonSearch = document.querySelector('.button_search');
+// let apikey = '6b6ec75b'; // backup - 25851263, 3fb5f5bd
 
-buttonSearch.onclick = function() {
-  while (movieList.firstChild) {
-    movieList.removeChild(movieList.firstChild)
-  }
+// buttonSearch.onclick = function() {
+//   while (movieList.firstChild) {
+//     movieList.removeChild(movieList.firstChild)
+//   }
 
-  let searchWords = searchBar.value;
-  let url = 'http://www.omdbapi.com/?s=' + searchWords + '&apikey=' + apikey
-  fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
+//   let searchWords = searchBar.value;
+//   let url = 'http://www.omdbapi.com/?s=' + searchWords + '&apikey=' + apikey
+//   fetch(url)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
 
-      if (data.Response === 'False') {
-        noResults.classList.remove('hide');
-        noResults.innerHTML = data.Error;
-      } else {
+//       if (data.Response === 'False') {
+//         noResults.classList.remove('hide');
+//         noResults.innerHTML = data.Error;
+//       } else {
 
-        noResults.classList.add('hide');
+//         noResults.classList.add('hide');
 
-        for (let i = 0; i < data.Search.length; i++) {
-          if (data.Search[i].Poster === 'N/A') {
-            data.Search[i].Poster = 'img/poster_stub.png';
-          }
-          let movieCard = document.createElement('div');
-          movieCard.classList.add('movie_card');
-          movieCard.classList.add('col25');
-          movieCard.innerHTML =
-            '<div class="content">' +
-            '<div class="poster_cont">' +
-            '<img class="poster" src="' + data.Search[i].Poster + '" alt=""></div>' +
-            '<h3>' + data.Search[i].Title + '</h3>' +
-            '<p>' + data.Search[i].Year + '</p>' +
-            '<p>' + data.Search[i].Type + '</p>' +
-            '</div>' +
-            '<a href="https://www.imdb.com/title/' + data.Search[i].imdbID + '" class="show_more" target="_blank">Go to IMDB</a>' +
-            '<a href="file:///home/fox/hobby/SerialKiller_pureJS/index.html?' + data.Search[i].imdbID + '" class="show_more" target="_blank">raiting episodes</a>';
-          movieList.appendChild(movieCard);
-        }
-      }
-    })
-};
+//         for (let i = 0; i < data.Search.length; i++) {
+//           if (data.Search[i].Poster === 'N/A') {
+//             data.Search[i].Poster = 'img/poster_stub.png';
+//           }
+//           let movieCard = document.createElement('div');
+//           movieCard.classList.add('movie_card');
+//           movieCard.classList.add('col25');
+//           movieCard.innerHTML =
+//             '<div class="content">' +
+//             '<div class="poster_cont">' +
+//             '<img class="poster" src="' + data.Search[i].Poster + '" alt=""></div>' +
+//             '<h3>' + data.Search[i].Title + '</h3>' +
+//             '<p>' + data.Search[i].Year + '</p>' +
+//             '<p>' + data.Search[i].Type + '</p>' +
+//             '</div>' +
+//             '<a href="https://www.imdb.com/title/' + data.Search[i].imdbID + '" class="show_more" target="_blank">Go to IMDB</a>' +
+//             '<a href="file:///home/fox/hobby/SerialKiller_pureJS/index.html?' + data.Search[i].imdbID + '" class="show_more" target="_blank">raiting episodes</a>';
+//           movieList.appendChild(movieCard);
+//         }
+//       }
+//     })
+// };
 </script>
 
 <style scoped>
