@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="overlay"></div>
         <div class="row j_c">
             <div class="col8">
                 <div class="page_content">
@@ -37,10 +38,74 @@
                             <div class="search_content">
                                 <div class="filters">
                                     <input type="text" class="search_bar" name="searchBar" placeholder="Find any TV shows or series">
-                                    <a class="filter" href="">
-                                        <img class="icon_24" src="img/filter.svg" alt="">
-                                        <h5>Filters</h5>
-                                    </a>
+                                    <div class="filter_block">
+                                        <button class="filter_mobile" href="">
+                                            <img class="icon_24" src="img/filter.svg" alt="">
+                                        </button>
+                                        <button class="filter" href="">
+                                            <img class="icon_24" src="img/filter.svg" alt="">
+                                            <h5>Filters</h5>
+                                        </button>
+                                        <div class="popup_container">
+                                            <form action="">
+                                                <fieldset>
+                                                    <h5>Rating</h5>
+                                                    <div class="control_group">
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_1" id="checkbox_primary_1">
+                                                            <label for="checkbox_primary_1">1 - 3 stars</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_2" id="checkbox_primary_2">
+                                                            <label for="checkbox_primary_2">3 - 7 stars</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_3" id="checkbox_primary_3">
+                                                            <label for="checkbox_primary_3">7 - 10 stars</label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <h5>Year</h5>
+                                                    <div class="control_group">
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_4" id="checkbox_primary_4">
+                                                            <label for="checkbox_primary_4">1990s</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_5" id="checkbox_primary_5">
+                                                            <label for="checkbox_primary_5">2000s</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_6" id="checkbox_primary_6">
+                                                            <label for="checkbox_primary_6">2010s</label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <h5>Genre</h5>
+                                                    <div class="control_group">
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_7" id="checkbox_primary_7">
+                                                            <label for="checkbox_primary_7">Drama</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_8" id="checkbox_primary_8">
+                                                            <label for="checkbox_primary_8">Criminal</label>
+                                                        </div>
+                                                        <div class="checkbox_wrapper">
+                                                            <input type="checkbox" class="custom_checkbox" name="checkbox_primary_9" id="checkbox_primary_9">
+                                                            <label for="checkbox_primary_9">Comedy</label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="button-group">
+                                                    <button type="button" class="btn btn_S btn_primary">Apply</button>
+                                                    <button type="button" class="btn btn_S btn_secondary" id="close_filter">Cancel</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="banner">
                                     <div class="text_content">
@@ -60,7 +125,6 @@
             </div>
         </div>
     </div>
-
     <script>
         feather.replace()
     </script>

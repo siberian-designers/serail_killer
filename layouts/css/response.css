@@ -15,7 +15,10 @@
         padding: 20px 24px;
     }
     .filter{
-        margin-left: 4px;
+        display: none;
+    }
+    .filter_mobile{
+        display: block;
     }
     .burger_menu{
         display: block;
