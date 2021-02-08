@@ -1,23 +1,22 @@
 <template>
 <div id="app">
-  <Search/>
+  <MainPage />
 </div>
 </template>
 
 <script>
-import Search from './components/Search.vue'
-
+import MainPage from './components/pages/MainPage.vue'
 export default {
   name: 'App',
   components: {
-    Search
+    MainPage
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
