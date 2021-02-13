@@ -5,6 +5,7 @@
   <SearchBar placeholder="Find any TV shows or series" />
   <Banner />
   <Cards v-bind:cards="Search" />
+  <Footer />
 </div>
 </template>
 
@@ -14,6 +15,7 @@ import SearchBar from '../ui/SearchBar';
 import Header from '../ui/Header/Header';
 import Cards from '../ui/Cards';
 import Banner from '../ui/Banner'
+import Footer from '../ui/Footer'
 
 export default {
   name: 'MainPage',
@@ -22,7 +24,8 @@ export default {
     SearchBar,
     Header,
     Banner,
-    Cards
+    Cards,
+    Footer
   },
   data: function() {
     return {
@@ -81,7 +84,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
