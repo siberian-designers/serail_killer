@@ -17,7 +17,7 @@ export default {
   border-radius: 12px;
   color: #fff;
   width: 868px;
-  margin-top: 16px;
+  margin: 0 auto;
 }
 
 h3 {

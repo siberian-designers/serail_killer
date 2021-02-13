@@ -1,13 +1,15 @@
 <template>
 <div class="container">
   <div class="row movie_list">
-    <Card v-for="card in cards" v-bind:key="card" />
+    <Card
+      v-for="card in cards"
+      v-bind:card="card" />
   </div>
 </div>
 </template>
 
 <script>
-import Card from "@/components/Card";
+import Card from "@/components/ui/Card";
 export default {
   name: 'Cards',
   components: {
@@ -15,6 +17,7 @@ export default {
   },
   props: ["cards"]
 }
+// console.log(cards);
 </script>
 
 <style scoped>
