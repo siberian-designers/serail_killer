@@ -34,8 +34,9 @@ export default {
 <style scoped>
 header {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  width: 923px;
+  align-items: center;
+  padding: 16px 0;
 }
 </style>

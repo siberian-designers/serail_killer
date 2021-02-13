@@ -16,17 +16,20 @@ export default {
 
 <style>
 #app {
-  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   background: rgb(226, 226, 226);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  transition: .3s all;
 }
 
-/* grid */
 .container {
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -35,5 +38,75 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -12px;
+}
+
+.col2 {
+  width: calc(100% / 12 * 2 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+.col3 {
+  width: calc(100% / 12 * 3 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+.col4 {
+  width: calc(100% / 12 * 4 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+.col6 {
+  width: calc(100% / 12 * 6 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+.col8 {
+  width: calc(100% / 12 * 8 - 24px);
+  margin: 0 12px;
+  box-sizing: border-box;
+}
+
+.col10 {
+  width: calc(100% / 12 * 10 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+.col12 {
+  width: calc(100% / 12 * 12 - 24px);
+  margin: 12px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .row {
+    margin: 0 -10px;
+  }
+
+  .col8 {
+    width: calc(100% / 12 * 12 - 20px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .row {
+    margin: 0 -8px;
+  }
+
+  .col8 {
+    width: calc(100% / 12 * 12 - 8px);
+  }
 }
 </style>

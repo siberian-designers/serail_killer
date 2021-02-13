@@ -11,11 +11,11 @@ export default {
 
 <style>
 h1 {
+  font-size: 44px;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
   line-height: 64px;
-  color: #1D233A;
-  margin: 96px 0 16px;
+  letter-spacing: 0em;
+  padding: 16px 0;
 }
 </style>
