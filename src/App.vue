@@ -23,4 +23,17 @@ export default {
   color: #2c3e50;
   background: rgb(226, 226, 226);
 }
+
+/* grid */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
 </style>
