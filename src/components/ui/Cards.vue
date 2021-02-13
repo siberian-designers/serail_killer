@@ -3,7 +3,9 @@
   <div class="row movie_list">
     <Card
       v-for="card in cards"
-      v-bind:card="card" />
+      :key="card.Title"
+      v-bind:card="card"
+    />
   </div>
 </div>
 </template>
@@ -17,7 +19,6 @@ export default {
   },
   props: ["cards"]
 }
-// console.log(cards);
 </script>
 
 <style scoped>
