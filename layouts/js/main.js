@@ -72,4 +72,5 @@ popupFilter.addEventListener('swiped-up', function(){
 
 popupFilter.addEventListener('swiped-down', function(){
   popupFilter.classList.remove('open_bottom_sheet');
+  popupFilter.classList.toggle('show');
 });

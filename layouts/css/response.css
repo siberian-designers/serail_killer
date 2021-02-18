@@ -45,6 +45,7 @@
         top: 60%;
         border-radius: 20px;
         box-shadow: var(--shadow_80);
+        overflow: hidden;
     }
     .open_bsh_full{
         top: 0%;
