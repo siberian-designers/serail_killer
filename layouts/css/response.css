@@ -51,6 +51,15 @@
         top: 0%;
         border-radius: 0px;
     }
+
+    .touch_bar_container{
+        display: block;
+    }
+
+    .close_filter_icon{
+        display: none;
+    }
+
     .checkbox_wrapper{
         margin-bottom: 16px;
     }
@@ -63,5 +72,12 @@
     }
     .mobile_header img{
         margin-left: 16px;
+    }
+    .show_display{
+        display: block;
+    }
+    
+    .hide_display{
+        display: none;
     }
 }

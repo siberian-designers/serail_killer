@@ -223,6 +223,25 @@ a:focus{
     padding: 24px 32px;
 }
 
+.touch_bar_container{
+    display: none;
+}
+
+.touch_bar_move{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.touch_bar{
+    border: none;
+    border-radius: 2px;
+    background-color: var(--gray_30);
+    width: 120px;
+    height: 4px;
+}
+
 .popup_container{
     background: var(--white);
     box-shadow: var(--shadow_80);
@@ -419,4 +438,12 @@ input[type="checkbox"]:checked + label:after{
     opacity: 1;
     visibility: visible;
     transition: .3s all;
+}
+
+.show_display{
+    display: block;
+}
+
+.hide_display{
+    display: none;
 }

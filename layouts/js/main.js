@@ -8,6 +8,7 @@ let sideBar = document.querySelector(".sidebar");
 let closeSidebar = document.querySelector(".close_sidebar");
 let bottomSheet = document.querySelector(".bottom_sheet");
 let openBottom = document.querySelector(".filter_mobile");
+let touchBar = document.querySelector(".touch_bar_container");
 
 openFilter.addEventListener('click', function(){
     popupFilter.classList.toggle('show');
@@ -22,6 +23,8 @@ closeFilter.addEventListener('click', function(){
     overlay.classList.remove('show');
     popupFilter.classList.remove('open_bottom_sheet');
     popupFilter.classList.remove('open_bsh_full');
+    closeFilterIcon.classList.remove('show_display');
+    touchBar.classList.remove('hide_display');
 });
 
 closeFilterIcon.addEventListener('click', function(){
@@ -29,6 +32,8 @@ closeFilterIcon.addEventListener('click', function(){
     overlay.classList.remove('show');
     popupFilter.classList.remove('open_bottom_sheet');
     popupFilter.classList.remove('open_bsh_full');
+    closeFilterIcon.classList.remove('show_display');
+    touchBar.classList.remove('hide_display');
 });
 
 document.body.addEventListener('keyup', function(e){
@@ -68,9 +73,14 @@ openBottom.addEventListener('click', function () {
 popupFilter.addEventListener('swiped-up', function(){
     popupFilter.classList.remove('open_bottom_sheet');
     popupFilter.classList.add('open_bsh_full');
+    touchBar.classList.add('hide_display');
+    closeFilterIcon.classList.add('show_display');
 });
 
 popupFilter.addEventListener('swiped-down', function(){
+  popupFilter.classList.remove('open_bsh_full');
   popupFilter.classList.remove('open_bottom_sheet');
   popupFilter.classList.toggle('show');
+  closeFilterIcon.classList.remove('show_display');
+  touchBar.classList.remove('hide_display');
 });
