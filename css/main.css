@@ -261,7 +261,6 @@ a:focus{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
 }
 
 .popup_container fieldset{
@@ -289,6 +288,7 @@ a:focus{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 16px;
 }
 
 .button_group button{

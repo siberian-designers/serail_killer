@@ -77,7 +77,7 @@ popupFilter.addEventListener('swiped-up', function(){
     closeFilterIcon.classList.add('show_display');
 });
 
-popupFilter.addEventListener('swiped-down', function(){
+touchBar.addEventListener('swiped-down', function(){
   popupFilter.classList.remove('open_bsh_full');
   popupFilter.classList.remove('open_bottom_sheet');
   popupFilter.classList.toggle('show');
