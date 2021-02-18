@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/serial.css">
+    <link rel="stylesheet" href="css/response.css">
+    <title>Game of thrones</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col12">
+                <header>
+                    <div class="mobile_header">
+                        <div class="burger_menu">
+                            <i class="burger_icon" data-feather="menu"></i>
+                        </div>
+                        <a href="index.html">
+                            <img class="logo" src="img/logo_white.svg" alt="logo">
+                        </a>
+                    </div>
+                    
+                    <div class="header_search">
+                        <div class="search_wrapper">
+                            <div class="search_bar_wrapper">
+                                <input type="text" class="search_bar" name="searchBar" placeholder="Find any TV shows or series">
+                                <i class="x_circle_icon" data-feather="x-circle"></i>
+                            </div>
+                            <div class="elastic_search_container">
+                                <ul class="elastic_list">
+                                    <li>
+                                        <a href="serial.html" class="elastic_item">
+                                            <div class="elastic_item_wrapper">
+                                                <div class="elastic_item_img">
+                                                    <img src="img/elastic_preview.png" width="40" height="40">
+                                                </div>
+                                                <div class="elastic_item_title">
+                                                    <h6>Game of Thrones</h6>
+                                                    <p class="small">2011 <span>Drama, Adventure</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="elastic_item_rating">
+                                                <i class="star_icon" data-feather="star"></i>
+                                                <span class="small">9.2</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu">
+                        <div class="menu_item dark">
+                            <a href="" tabindex="1">
+                                <h5>About service</h5>
+                            </a>
+                        </div>
+                        <div class="menu_item dark">
+                            <a href="" tabindex="2">
+                                <h5>Telegram</h5>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="search_mobile">
+                        <i class="search_icon" data-feather="search"></i>
+                    </div>
+                    
+                    <aside class="sidebar">
+                        <div class="menu_mobile">
+                            <div class="menu_item">
+                                <i class="close_sidebar" data-feather="x"></i>
+                            </div>
+                            <div class="menu_item">
+                                <a href="" tabindex="1">
+                                    <h5>About service</h5>
+                                </a>
+                            </div>
+                            <div class="menu_item">
+                                <a href="" tabindex="2">
+                                    <h5>Telegram</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </header>
+            </div>
+        </div>
+
+        <section class="series_info">
+            <div class="row">
+                <div class="col3">
+                    <div class="series_banner">
+                        <img src="img/series_banner.png" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="col6">
+                    <div class="series_title">
+                        <h1>Game of Thrones</h1>
+                    </div>
+                    <div class="series_yeargenre">
+                        <p>2010</p>
+                        <p>Action, Adventure, Drama</p>
+                    </div>
+                    <div class="series_rating">
+                        <i class="series_rating_icon" data-feather="star"></i>
+                        <h5>9.2</h5>
+                    </div>
+                    <div class="series_description">
+                        <p>Nine noble families fight for control over the lands of Westeros,
+                            while an ancient enemy returns after being dormant for millennia.</p>
+                    </div>
+                    <div class="series_creators">
+                        <h6>Creators:</h6>
+                        <p>David Benioff, D.B. Weiss</p>
+                    </div>
+                    <div class="series_stars">
+                        <h6>Stars:</h6>
+                        <p>Emilia Clarke, Peter Dinklage, Kit Harington, etc.</p>
+                    </div>
+                    <div class="button_wishlist">
+                        <button type="button" class="btn btn_S btn_dark">
+                            <i class="heart_icon" data-feather="heart"></i>
+                            Add to wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="ratings_info_mobile">
+        <div class="container">
+            <div class="ratings_info">
+                <div class="row">
+                    <div class="col12">
+                        <div class="ratings_title">
+                            <h2>Rating series</h2>
+                        </div>
+                        <div class="ratings_curve">
+                            <img src="img/ratings_curve.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+    </section>
+
+    <script>
+        feather.replace()
+    </script>
+    <script src="js/swiper.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/search_header.js"></script>
+</body>
+</html>

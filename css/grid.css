@@ -12,25 +12,25 @@
 
 .col2{
     width: calc(100% / 12 * 2 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
 .col3{
     width: calc(100% / 12 * 3 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
 .col4{
     width: calc(100% / 12 * 4 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
 .col6{
     width: calc(100% / 12 * 6 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
@@ -42,13 +42,13 @@
 
 .col10{
     width: calc(100% / 12 * 10 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
 .col12{
     width: calc(100% / 12 * 12 - 24px);
-    margin: 12px;
+    margin: 0 12px;
     box-sizing: border-box;
 }
 
@@ -74,6 +74,12 @@
         margin: 0 -8px;
     }
     .col8{
+        width: calc(100% / 12 * 12 - 8px);
+    }
+    .col3{
+        width: calc(100% / 12 * 12 - 8px);
+    }
+    .col6{
         width: calc(100% / 12 * 12 - 8px);
     }
 }

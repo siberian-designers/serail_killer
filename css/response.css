@@ -89,4 +89,37 @@
     .hide_display{
         display: none;
     }
+
+    .search_mobile{
+        display: block;
+    }
+
+    .header_search{
+        display: none;
+    }
+
+    .series_title{
+        margin-top: 20px;
+    }
+
+    .button_wishlist button{
+        width: 100%;
+    }
+
+    .series_info{
+        margin: 0 0 36px;
+    }
+
+    .ratings_info_mobile{
+        border-radius: 20px 20px 0 0;
+        background: var(--white_100);
+    }
+
+    .ratings_info{
+        padding: 20px 0;
+    }
+
+    .ratings_curve img{
+        object-fit: none;
+    }
 }

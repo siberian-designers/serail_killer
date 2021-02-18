@@ -1,0 +1,176 @@
+body{
+    background: var(--gray_100);
+    color: var(--white_100);
+}
+
+.dark a{
+    color: var(--white_100);
+}
+
+.dark:hover a{
+    color: var(--primary_80);
+}
+
+.header_search{
+    width: 50%;
+}
+
+.header_search input{
+    padding: 12px 24px;
+}
+
+.header_search input{
+    background: var(--gray_90);
+    padding: 12px 24px;
+    border: 1px solid var(--gray_90);
+    color: var(--white_100);
+}
+
+.header_search input::placeholder{
+    color: var(--gray_40);
+}
+
+.header_search input:hover{
+    background: var(--gray_90);
+    border: 1px solid var(--gray_90);
+}
+
+.header_search input:focus{
+    border: 1px solid var(--gray_90);
+    background: var(--gray_90);
+}
+
+.search_mobile{
+    display: none;
+}
+
+.search_icon{
+    stroke: var(--white_100);
+}
+
+.series_info{
+    margin: 48px 0;
+}
+
+.series_banner img{
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.series_title{
+    margin-bottom: 0px;
+}
+
+.series_title h1{
+    padding: 0;
+}
+
+.series_yeargenre{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.series_yeargenre p{
+    padding: 0;
+    margin-right: 12px;
+    color: var(--white_80);
+}
+
+.series_rating{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.series_rating_icon{
+    stroke: var(--yellow_80);
+    fill: var(--yellow_80);
+    margin-right: 8px;
+}
+
+.series_rating h5{
+    padding: 0;
+}
+
+.series_description{
+    margin-bottom: 20px;
+}
+
+.series_description p{
+    padding: 0;
+    color: var(--white_80);
+}
+
+.series_creators{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.series_creators h6,
+.series_creators p {
+    padding: 0;
+}
+
+.series_creators h6{
+    margin-right: 16px;
+}
+
+.series_creators p{
+    color: var(--white_80);
+}
+
+.series_stars{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.series_stars h6,
+.series_stars p {
+    padding: 0;
+}
+
+.series_stars h6{
+    margin-right: 16px;
+}
+
+.series_stars p {
+    color: var(--white_80);
+}
+
+.button_wishlist button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_wishlist .heart_icon{
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+.ratings_info{
+    border-radius: 20px;
+    background: var(--white_100);
+    padding: 40px 36px;
+    color: var(--gray_100);
+}
+
+.ratings_title{
+    margin-bottom: 20px;
+}
+
+.ratings_title h2{
+    padding: 0;
+}
+
+.ratings_curve{
+    overflow-x: scroll;
+}
+
+.ratings_curve img{
+    overflow-x: scroll;
+    object-fit: contain;
+}

@@ -3,9 +3,6 @@ let popupFilter = document.querySelector(".popup_container");
 let closeFilter = document.querySelector("#close_filter");
 let closeFilterIcon = document.querySelector(".close_filter_icon");
 let overlay = document.querySelector(".overlay");
-let burger = document.querySelector(".burger_menu");
-let sideBar = document.querySelector(".sidebar");
-let closeSidebar = document.querySelector(".close_sidebar");
 let bottomSheet = document.querySelector(".bottom_sheet");
 let openBottom = document.querySelector(".filter_mobile");
 let touchBar = document.querySelector(".touch_bar_container");
@@ -44,7 +41,6 @@ document.body.addEventListener('keyup', function(e){
     if(key === 27){
         popupFilter.classList.remove('show');
         overlay.classList.remove('show');
-        elasticResults.classList.remove('show_display');
     };  
 });
 
@@ -55,18 +51,6 @@ overlay.addEventListener('click', function() {
     popupFilter.classList.remove('open_bsh_full');
     elasticResults.classList.remove('show_display');
 
-});
-
-burger.addEventListener('click', function(){
-    sideBar.classList.add('sidebar_open');
-});
-
-closeSidebar.addEventListener('click', function(){
-    sideBar.classList.remove('sidebar_open');
-});
-
-sideBar.addEventListener('swiped-left', function(){
-    sideBar.classList.remove('sidebar_open');
 });
 
 openBottom.addEventListener('click', function () {
@@ -90,21 +74,4 @@ touchBar.addEventListener('swiped-down', function(){
   popupFilter.classList.toggle('show');
   closeFilterIcon.classList.remove('show_display');
   touchBar.classList.remove('hide_display');
-});
-
-
-//elastic search
-
-let searchBar = document.querySelector(".search_bar");
-let clearSearch = document.querySelector(".x_circle_icon");
-let elasticResults = document.querySelector(".elastic_search_container");
-
-searchBar.addEventListener('click', function(){
-    elasticResults.classList.add('show_display');
-    overlay.classList.add('show');
-    popupFilter.classList.remove('show');
-    popupFilter.classList.remove('open_bsh_full');
-    popupFilter.classList.remove('open_bottom_sheet');
-    closeFilterIcon.classList.remove('show_display');
-    touchBar.classList.remove('hide_display');
 });

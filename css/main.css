@@ -48,7 +48,9 @@ header{
 }
 
 .logo {
-    cursor: default;
+    cursor: pointer;
+    height: 19px;
+    display: block;
 }
 
 .menu{
@@ -205,6 +207,10 @@ a:focus{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+}
+
+.elastic_item:hover h6{
+    color: var(--primary_80);
 }
 
 .elastic_item_wrapper{
@@ -433,6 +439,19 @@ a:focus{
 .btn_secondary:active{
     color: var(--primary_100);
     background: var(--gray_20);
+}
+
+.btn_dark{
+    background: var(--gray_90);
+    color: var(--white_100);
+}
+
+.btn_dark:hover{
+    background: var(--primary_80);
+}
+
+.btn_dark:active{
+    background: var(--primary_100);
 }
 
 .checkbox_wrapper{
