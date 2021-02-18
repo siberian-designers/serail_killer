@@ -1,3 +1,3 @@
-# SerialKiller_pureJS
+# Layouts on HTML and CSS
 
-https://alexbazh.github.io/SerialKiller_pureJS/
+https://siberian-designers.github.io/serail_killer/
