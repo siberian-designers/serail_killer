@@ -8,8 +8,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     transition: .3s all;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
 }
 
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
 
 .j_c{
     justify-content: center;
@@ -123,6 +129,25 @@ a:focus{
     padding: 0px;
 }
 
+.search_wrapper{
+    width: 100%;
+    position: relative;
+}
+
+.search_bar_wrapper{
+    position: relative;
+}
+
+.x_circle_icon{
+    position: absolute;
+    top: 25%;
+    left: 95%;
+    fill: var(--gray_40);
+    stroke: var(--gray_10);
+    visibility: 0;
+    opacity: 0;
+}
+
 .search_bar{
     background: var(--gray_10);
     border-radius: 12px;
@@ -135,6 +160,7 @@ a:focus{
     color: var(--gray_100);
     width: 100%;
     outline: none;
+    z-index: 10;
 }
 
 .search_bar::placeholder{
@@ -153,6 +179,72 @@ a:focus{
 .search_bar:focus{
     border: 1px solid var(--gray_20);
     background: var(--gray_20);
+    border-radius: 12px 12px 0px 0px;
+}
+
+.elastic_search_container{
+    width: 100%;
+    height: 212px;
+    box-shadow: var(--shadow_80);
+    z-index: 29;
+    border-radius: 0px 0px 12px 12px;
+    position: absolute;
+    background: var(--white_100);
+    display: none;
+}
+
+.elastic_list{
+    list-style: none;
+    height: 100%;
+    overflow-y:auto;
+    padding: 16px 24px;
+}
+
+.elastic_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.elastic_item_wrapper{
+    display: flex;
+}
+
+.elastic_item_img img{
+    object-fit: contain;
+}
+
+.elastic_item_title{
+    margin-left: 8px;
+}
+
+.elastic_item_title h6{
+    padding: 0;
+    color: var(--gray_100);
+}
+
+.elastic_item_title p{
+    padding: 0;
+    color: var(--gray_80);
+}
+
+.elastic_item_rating{
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.star_icon{
+    fill: var(--yellow_80);
+    stroke: none;
+}
+
+.elastic_item_rating span{
+    margin-left: 4px;
+    padding: 0;
+    color: var(--gray_80);
 }
 
 .filter_block{

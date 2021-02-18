@@ -17,6 +17,15 @@
     .burger_menu{
         display: block;
     }
+    .x_circle_icon{
+        left: 88%;
+    }
+    .elastic_search_container{
+        height: 20hv;
+    }
+    .elastic_list{
+        padding: 16px 12px;
+    }
     .filter_block{
         position: static;
     }
