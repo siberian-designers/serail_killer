@@ -73,13 +73,20 @@
     .row{
         margin: 0 -8px;
     }
-    .col8{
-        width: calc(100% / 12 * 12 - 8px);
+    .col2{
+        width: calc(100% / 12 * 6 - 16px);
+        margin: 0 8px;
     }
     .col3{
-        width: calc(100% / 12 * 12 - 8px);
+        width: calc(100% / 12 * 12 - 16px);
+        margin: 0 8px;
     }
     .col6{
-        width: calc(100% / 12 * 12 - 8px);
+        width: calc(100% / 12 * 12 - 16px);
+        margin: 0 8px;
+    }
+    .col8{
+        width: calc(100% / 12 * 12 - 16px);
+        margin: 0 8px;
     }
 }

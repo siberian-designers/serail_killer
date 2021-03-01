@@ -122,4 +122,9 @@
     .ratings_curve img{
         object-fit: none;
     }
+
+    .movie {
+        height: 240px;
+        margin-top: 24px;
+    }
 }

@@ -11,3 +11,10 @@ searchBar.addEventListener('click', function(){
     closeFilterIcon.classList.remove('show_display');
     touchBar.classList.remove('hide_display');
 });
+
+searchBar.addEventListener('keyup', function(e){
+    let key = e.keyCode;
+    if(key === 13){
+        window.location.href = 'search_result.html';
+    };  
+});
