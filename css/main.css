@@ -146,8 +146,9 @@ a:focus{
     left: 95%;
     fill: var(--gray_40);
     stroke: var(--gray_10);
-    visibility: 0;
+    visibility: hidden;
     opacity: 0;
+    cursor: pointer;
 }
 
 .search_bar{
