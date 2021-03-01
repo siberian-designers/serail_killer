@@ -6,6 +6,7 @@ let overlay = document.querySelector(".overlay");
 let bottomSheet = document.querySelector(".bottom_sheet");
 let openBottom = document.querySelector(".filter_mobile");
 let touchBar = document.querySelector(".touch_bar_container");
+let body = document.querySelector("body");
 
 //filters + bottom sheet
 
@@ -34,6 +35,7 @@ closeFilterIcon.addEventListener('click', function(){
     popupFilter.classList.remove('open_bsh_full');
     closeFilterIcon.classList.remove('show_display');
     touchBar.classList.remove('hide_display');
+    body.classList.remove('overflow_h');
 });
 
 document.body.addEventListener('keyup', function(e){
@@ -58,6 +60,7 @@ openBottom.addEventListener('click', function () {
     popupFilter.classList.toggle('open_bottom_sheet');
     overlay.classList.add('show');
     elasticResults.classList.remove('show_display');
+    body.classList.add('overflow_h');
 });
 
 
@@ -74,4 +77,5 @@ touchBar.addEventListener('swiped-down', function(){
   popupFilter.classList.toggle('show');
   closeFilterIcon.classList.remove('show_display');
   touchBar.classList.remove('hide_display');
+  body.classList.remove('overflow_h');
 });

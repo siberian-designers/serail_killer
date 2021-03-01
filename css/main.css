@@ -559,3 +559,7 @@ input[type="checkbox"]:checked + label:after{
 .hide_display{
     display: none;
 }
+
+.overflow_h{
+    overflow: hidden;
+}

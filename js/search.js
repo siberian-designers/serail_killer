@@ -3,6 +3,14 @@ let clearSearch = document.querySelector(".x_circle_icon");
 let elasticResults = document.querySelector(".elastic_search_container");
 let deleteSearch = document.querySelector(".x_circle_icon");
 
+document.addEventListener("DOMContentLoaded", () => {
+    if(searchBar.value != ''){
+        deleteSearch.classList.add('show');
+    } else{
+        deleteSearch.classList.remove('show');
+    };
+  });
+
 searchBar.addEventListener('click', function(){
     elasticResults.classList.add('show_display');
     overlay.classList.add('show');
